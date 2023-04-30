@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+  }
+
+.html
+{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+    line-height: 1.5;
+}
+
+header {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    display: table;
+    width: 100%;
+}
+
+.content_github_profile {
+    float: left;
+    height: 90%;
+    margin-left: 5%;
+}
+
+.img_github_profile_pic {
+    float: left;
+    height: 4em;
+}
+
+.text_github_username {
+    padding: 5% 5% 5% 5%;
+    text-justify: auto;
+}
+
+.content_info_menu {
+   float: right;
+   margin-right: 5%;
+   display: flexbox;
+   align-items: center;
+   column-gap: 3vw;
+}
+
+.info_menu_button {
+    background: #000000;
+    border: none;
+    color: white;
+    padding: 1rem 3rem;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+    font-size: 2em;
+    border-radius: 15px;
+    transition: 0.3s;
+    justify-content: center;
+}
+
+.info_menu_button:hover {
+    background: #2c2c2c;
+}
+
+.main_container {
+    display: inline-flexbox;
+    background: silver;
+    align-content: center;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+}
+
+.info_page {
+    transition: 0.2s;
+    width: 100%;
+    height: max-content;
+    flex-flow: column;
+}
+
+footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: right;
+    padding: 10px;
+    height: auto;
+}
