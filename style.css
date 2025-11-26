@@ -67,20 +67,30 @@ header {
 }
 
 .main_container {
-    display: inline-flexbox;
     background: silver;
     align-content: center;
     background: #ffffff;
     color: #000000;
     text-align: center;
     padding: 10px;
+    display: flexbox;
 }
 
 .info_page {
     transition: 0.2s;
     width: 100%;
     height: max-content;
-    flex-flow: column;
+    background: #2c2c2c;
+}
+
+.img_main_content {
+    height: 36em;
+    float: left;
+}
+
+.text_main_content {
+    height: 36em;
+    text-justify: auto;
 }
 
 footer {
@@ -88,5 +98,4 @@ footer {
     color: #ffffff;
     text-align: right;
     padding: 10px;
-    height: auto;
 }

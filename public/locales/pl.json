@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "language": "Polski",
+    "code": "pl"
+  },
+  "site": {
+    "title": "Mikołaj Gajewski — Twórca Gier",
+    "eyebrow": "Twórca i Designer Gier",
+    "tagline": "Tworzenie wciągających doświadczeń w grach"
+  },
+  "nav": [
+    { "label": "Gry", "href": "#games" },
+    { "label": "Umiejętności", "href": "#skills" },
+    { "label": "Kod", "href": "#code" },
+    { "label": "Kontakt", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "Niezależny Twórca Gier",
+    "title": "Buduję światy, które gracze uwielbiają eksplorować.",
+    "subtitle": "Pasjonat tworzenia gier specjalizujący się w mechanikach rozgrywki, immersyjnym poziomie designu i wyjątkowych doświadczeniach graczy na wielu platformach.",
+    "bullets": [
+      "Ekspert Unity i Unreal Engine",
+      "Opublikowane gry indie na Steam i itch.io",
+      "Silny nacisk na design skoncentrowany na graczu"
+    ],
+    "stats": [
+      { "value": "5+", "label": "lat doświadczenia" },
+      { "value": "12", "label": "wydanych projektów" },
+      { "value": "10K+", "label": "graczy na świecie" }
+    ],
+    "ctaPrimary": { "label": "Zobacz Moje Gry", "href": "#games" },
+    "ctaSecondary": { "label": "Skontaktuj Się", "href": "#contact" }
+  },
+  "games": {
+    "eyebrow": "Portfolio",
+    "title": "Wybrane Projekty Gier",
+    "subtitle": "Wybór moich najbardziej ekscytujących prac nad grami, od szybkiej akcji po atmosferyczne gry logiczne.",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "Neon Velocity",
+        "description": "Szybka gra wyścigowa w cyberpunkowym stylu z proceduralnie generowanymi torami i rywalizacją wieloosobową.",
+        "specs": [
+          "Wydana na Steam (2023)",
+          "85% pozytywnych recenzji",
+          "System sieciowy multiplayer"
+        ]
+      },
+      {
+        "badge": "Unreal",
+        "title": "Shadow's Echo",
+        "description": "Atmosferyczna gra platformowa z unikalnymi mechanikami manipulacji cieniem i ręcznie wykonanymi poziomami.",
+        "specs": [
+          "Zwycięzca: Indie Game Festival 2024",
+          "Niestandardowe łamigłówki fizyczne",
+          "20+ godzin rozgrywki"
+        ]
+      },
+      {
+        "badge": "Godot",
+        "title": "Pixel Dungeon Crawler",
+        "description": "Roguelike crawler lochów z proceduralną generacją, turową walką i retro estetyką.",
+        "specs": [
+          "500+ przedmiotów i umiejętności",
+          "Proceduralna generacja lochów",
+          "Multi-platforma (PC, Mobile)"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Technologie",
+    "title": "Narzędzia i Ekspertyza",
+    "subtitle": "Biegłość w branżowych silnikach gier, językach programowania i narzędziach kreatywnych.",
+    "categories": [
+      {
+        "name": "Silniki Gier",
+        "items": ["Unity 3D", "Unreal Engine 5", "Godot", "GameMaker"]
+      },
+      {
+        "name": "Programowanie",
+        "items": ["C#", "C++", "Python", "GDScript", "JavaScript"]
+      },
+      {
+        "name": "Narzędzia i Design",
+        "items": ["Blender", "Photoshop", "Git", "Jira", "Aseprite"]
+      },
+      {
+        "name": "Specjalizacje",
+        "items": ["Systemy Rozgrywki", "Zachowania AI", "Multiplayer", "Generacja Proceduralna"]
+      }
+    ]
+  },
+  "code": {
+    "eyebrow": "Prezentacja Kodu",
+    "title": "Najlepszy Kod",
+    "subtitle": "Czyste, efektywne rozwiązania interesujących wyzwań w tworzeniu gier.",
+    "snippets": [
+      {
+        "title": "Wydajny Object Pooling",
+        "language": "C#",
+        "description": "Oszczędny pamięciowo system poolingu obiektów do wydajnego spawnowania pocisków.",
+        "code": "public class ObjectPool<T> where T : MonoBehaviour\n{\n    private Queue<T> pool = new Queue<T>();\n    private T prefab;\n    \n    public T Get()\n    {\n        return pool.Count > 0 ? pool.Dequeue() : \n               Object.Instantiate(prefab);\n    }\n    \n    public void Return(T obj)\n    {\n        obj.gameObject.SetActive(false);\n        pool.Enqueue(obj);\n    }\n}"
+      },
+      {
+        "title": "Proceduralny Generator Lochów",
+        "language": "Python",
+        "description": "Algorytm BSP do generowania losowych układów lochów z gwarantowaną łącznością.",
+        "code": "def generate_dungeon(width, height, min_room_size):\n    root = BSPNode(0, 0, width, height)\n    root.split(min_room_size)\n    rooms = root.get_rooms()\n    corridors = connect_rooms(rooms)\n    return Dungeon(rooms, corridors)"
+      },
+      {
+        "title": "Płynne Śledzenie Kamery",
+        "language": "C#",
+        "description": "Responsywny system kamery z wygładzaniem i predykcją dla gier platformowych.",
+        "code": "void LateUpdate()\n{\n    Vector3 targetPos = target.position + \n        target.velocity.normalized * lookAhead;\n    transform.position = Vector3.Lerp(\n        transform.position, \n        targetPos, \n        smoothSpeed * Time.deltaTime\n    );\n}"
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Doświadczenie",
+    "title": "Doświadczenie i Osiągnięcia",
+    "subtitle": "Najważniejsze momenty z mojej podróży w tworzeniu gier.",
+    "points": [
+      "🏆 Zwycięzca: Najlepsza Gra Indie — Indie Game Festival 2024",
+      "🎮 5+ lat profesjonalnego doświadczenia w tworzeniu gier",
+      "📦 12 opublikowanych gier na Steam, itch.io i platformach mobilnych",
+      "🌍 10,000+ graczy na całym świecie w różnych tytułach",
+      "💻 Współtwórca open-source silnika Godot i narzędzi dla twórców gier",
+      "🎓 Mentor 20+ aspirujących twórców gier przez kursy online"
+    ]
+  },
+  "contact": {
+    "eyebrow": "Nawiążmy Kontakt",
+    "title": "Gotowy na współpracę?",
+    "subtitle": "Czy szukasz twórcy gier, chcesz omówić projekt, czy po prostu porozmawiać o grach — chętnie się skontaktuję!",
+    "bullets": [
+      "Dostępny dla freelance projektów gier",
+      "Otwarty na współpracę i możliwości zespołowe",
+      "Chętny do dyskusji o designie i tworzeniu gier"
+    ],
+    "cta": {
+      "label": "Napisz do mnie",
+      "href": "mailto:contact@mikiplaygames.dev?subject=Porozmawiajmy%20o%20grach"
+    }
+  },
+  "footer": {
+    "text": "Tworzę gry z pasją",
+    "legal": "© Mikołaj Gajewski"
+  }
+}
+
