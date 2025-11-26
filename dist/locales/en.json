@@ -4,8 +4,8 @@
     "code": "en"
   },
   "site": {
-    "title": "Mikołaj Gajewski — Game Developer",
-    "eyebrow": "Game Developer & Designer",
+    "title": "Mikołaj Gajewski - Game Developer",
+    "eyebrow": "Game Developer",
     "tagline": "Creating immersive gaming experiences"
   },
   "nav": [
@@ -121,7 +121,7 @@
     "title": "Experience & Achievements",
     "subtitle": "Highlights from my game development journey.",
     "points": [
-      "🏆 Winner: Best Indie Game — Indie Game Festival 2024",
+      "🏆 Winner: Best Indie Game - Indie Game Festival 2024",
       "🎮 5+ years of professional game development experience",
       "📦 12 published games across Steam, itch.io, and mobile platforms",
       "🌍 10,000+ players worldwide across various titles",
@@ -132,7 +132,7 @@
   "contact": {
     "eyebrow": "Let's Connect",
     "title": "Ready to collaborate?",
-    "subtitle": "Whether you're looking for a game developer, want to discuss a project, or just chat about games — I'd love to hear from you!",
+    "subtitle": "Whether you're looking for a game developer, want to discuss a project, or just chat about games - I'd love to hear from you!",
     "bullets": [
       "Available for freelance game development projects",
       "Open to collaboration and team opportunities",
@@ -144,7 +144,7 @@
     }
   },
   "footer": {
-    "text": "Crafting games with passion",
+    "text": "Crafting games with skill in hand",
     "legal": "© Mikołaj Gajewski"
   }
 }

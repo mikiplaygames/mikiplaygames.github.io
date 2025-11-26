@@ -7,9 +7,16 @@ A modern, responsive portfolio website showcasing game development projects, ski
 - **Dark Gaming Theme**: Eye-catching purple and pink gradient design with glow effects
 - **Bilingual Support**: Full English and Polish localization
 - **Responsive Design**: Works beautifully on all devices
+- **Three Project Categories**:
+  - **Published Games**: Commercially released projects
+  - **Game Jams**: Fast-paced jam projects and hackathons
+  - **Personal Projects**: Work in progress and experiments
+- **Detailed Project Cards**: Each project includes:
+  - Your role in the project
+  - Key responsibilities and contributions
+  - Project specifications and achievements
 - **Interactive Sections**:
   - Hero section with stats and call-to-action buttons
-  - Featured game projects showcase
   - Technology & skills display with categorized tags
   - Code snippets showcase with syntax highlighting
   - Experience & achievements timeline
@@ -54,24 +61,87 @@ npm run preview
 
 ### Adding Your Games
 
-Edit `public/locales/en.json` and `public/locales/pl.json` to add your game projects:
+Your portfolio now has three categories of projects. Edit `public/locales/en.json` and `public/locales/pl.json`:
 
+#### Published Games
 ```json
-"games": {
+"published": {
   "cards": [
     {
       "badge": "Unity",
       "title": "Your Game Title",
       "description": "Game description",
+      "role": "Your Role (e.g., Lead Developer)",
+      "responsibilities": [
+        "What you designed/built",
+        "Systems you implemented",
+        "Features you created"
+      ],
       "specs": [
-        "Feature 1",
-        "Feature 2",
-        "Feature 3"
+        "Platform & Release info",
+        "Player count or reviews",
+        "Special achievements"
       ]
     }
   ]
 }
 ```
+
+#### Game Jam Projects
+```json
+"gamejam": {
+  "cards": [
+    {
+      "badge": "Unity",
+      "title": "Jam Game Name",
+      "description": "Created during [Event Name]",
+      "role": "Your Role",
+      "responsibilities": [
+        "What you contributed",
+        "Time constraint achievements"
+      ],
+      "specs": [
+        "Event name and year",
+        "Rankings or ratings",
+        "Play count"
+      ]
+    }
+  ]
+}
+```
+
+#### Personal/Private Projects
+```json
+"private": {
+  "cards": [
+    {
+      "badge": "Unreal",
+      "title": "Project Name",
+      "description": "Experimental project description",
+      "role": "Your Role",
+      "responsibilities": [
+        "What you're working on",
+        "Technologies being explored"
+      ],
+      "specs": [
+        "Development status",
+        "Target platform",
+        "Expected release"
+      ]
+    }
+  ]
+}
+```
+
+### Project Card Structure
+
+Each project card can include:
+- **badge**: Engine/framework name (Unity, Unreal, Godot, etc.)
+- **title**: Project name
+- **description**: Brief overview of the game
+- **role**: Your specific role (optional but recommended)
+- **responsibilities**: Array of key contributions (optional but recommended)
+- **specs**: Technical details, stats, achievements
 
 ### Adding Code Snippets
 

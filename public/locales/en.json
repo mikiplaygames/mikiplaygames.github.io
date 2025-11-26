@@ -4,12 +4,12 @@
     "code": "en"
   },
   "site": {
-    "title": "Mikołaj Gajewski — Game Developer",
-    "eyebrow": "Game Developer & Designer",
+    "title": "Mikołaj Gajewski - Game Developer",
+    "eyebrow": "Game Developer",
     "tagline": "Creating immersive gaming experiences"
   },
   "nav": [
-    { "label": "Games", "href": "#games" },
+    { "label": "Games", "href": "#games-published" },
     { "label": "Skills", "href": "#skills" },
     { "label": "Code", "href": "#code" },
     { "label": "Contact", "href": "#contact" }
@@ -28,8 +28,145 @@
       { "value": "12", "label": "shipped projects" },
       { "value": "10K+", "label": "players worldwide" }
     ],
-    "ctaPrimary": { "label": "View My Games", "href": "#games" },
+    "ctaPrimary": { "label": "View My Games", "href": "#games-published" },
     "ctaSecondary": { "label": "Get in Touch", "href": "#contact" }
+  },
+  "published": {
+    "eyebrow": "Published Games",
+    "title": "Released Projects",
+    "subtitle": "Commercially released games available on various platforms.",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "Neon Velocity",
+        "description": "Fast-paced cyberpunk racing game with procedurally generated tracks and competitive multiplayer.",
+        "role": "Lead Developer & Designer",
+        "responsibilities": [
+          "Designed and implemented core racing mechanics",
+          "Built procedural track generation system",
+          "Developed networked multiplayer infrastructure",
+          "Created UI/UX and visual effects"
+        ],
+        "specs": [
+          "Released on Steam (2023)",
+          "85% positive reviews",
+          "10,000+ downloads"
+        ]
+      },
+      {
+        "badge": "Unreal",
+        "title": "Shadow's Echo",
+        "description": "Atmospheric puzzle-platformer featuring unique shadow manipulation mechanics and hand-crafted levels.",
+        "role": "Solo Developer",
+        "responsibilities": [
+          "Developed custom shadow physics system",
+          "Designed and built 20+ puzzle levels",
+          "Implemented character controller and movement",
+          "Created lighting and atmosphere systems"
+        ],
+        "specs": [
+          "Winner: Indie Game Festival 2024",
+          "20+ hours of gameplay",
+          "Featured on IndieDB"
+        ]
+      }
+    ]
+  },
+  "gamejam": {
+    "eyebrow": "Game Jams",
+    "title": "Game Jam Projects",
+    "subtitle": "Fast-paced projects created during game jams and hackathons.",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "Time Loop Escape",
+        "description": "Puzzle game where you manipulate time loops to solve challenges. Created in 48 hours for Ludum Dare.",
+        "role": "Programmer & Designer",
+        "responsibilities": [
+          "Implemented time loop mechanics",
+          "Designed 10 puzzle levels",
+          "Programmed player controls and interactions"
+        ],
+        "specs": [
+          "Ludum Dare 48 (2024)",
+          "Top 10% in Innovation",
+          "2,000+ plays on itch.io"
+        ]
+      },
+      {
+        "badge": "Godot",
+        "title": "Pixel Dungeon Crawler",
+        "description": "Roguelike dungeon crawler with procedural generation and turn-based combat.",
+        "role": "Lead Programmer",
+        "responsibilities": [
+          "Developed BSP dungeon generation algorithm",
+          "Implemented turn-based combat system",
+          "Created item and inventory systems"
+        ],
+        "specs": [
+          "Global Game Jam 2023",
+          "500+ items and abilities",
+          "Cross-platform (PC, Mobile)"
+        ]
+      },
+      {
+        "badge": "GameMaker",
+        "title": "Astral Survivors",
+        "description": "Wave-based survival shooter with rogue-lite progression.",
+        "role": "Solo Developer",
+        "responsibilities": [
+          "Programmed enemy AI and spawning systems",
+          "Designed weapon upgrade mechanics",
+          "Implemented visual effects and particles"
+        ],
+        "specs": [
+          "Mini Jam 72 hours",
+          "5,000+ plays",
+          "Rated 4.5/5 stars"
+        ]
+      }
+    ]
+  },
+  "private": {
+    "eyebrow": "Personal Projects",
+    "title": "Work in Progress",
+    "subtitle": "Private experiments and projects currently in development.",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "Quantum Shift",
+        "description": "Sci-fi puzzle game exploring quantum mechanics concepts through gameplay.",
+        "role": "Solo Developer",
+        "responsibilities": [
+          "Designing quantum-inspired game mechanics",
+          "Prototyping puzzle systems",
+          "Experimenting with shader effects",
+          "Building modular level design tools"
+        ],
+        "specs": [
+          "In development (2024-present)",
+          "Unity 2022 LTS",
+          "Target: Steam & itch.io"
+        ]
+      },
+      {
+        "badge": "Unreal",
+        "title": "Multiplayer Arena Prototype",
+        "description": "Experimental multiplayer combat arena with unique ability system.",
+        "role": "Gameplay Programmer",
+        "responsibilities": [
+          "Implementing networked ability system",
+          "Designing character classes and balance",
+          "Building arena maps and objectives",
+          "Testing multiplayer synchronization"
+        ],
+        "specs": [
+          "Early prototype stage",
+          "Unreal Engine 5.3",
+          "Dedicated server architecture"
+        ]
+      }
+    ]
   },
   "games": {
     "eyebrow": "Portfolio",
@@ -121,7 +258,7 @@
     "title": "Experience & Achievements",
     "subtitle": "Highlights from my game development journey.",
     "points": [
-      "🏆 Winner: Best Indie Game — Indie Game Festival 2024",
+      "🏆 Winner: Best Indie Game - Indie Game Festival 2024",
       "🎮 5+ years of professional game development experience",
       "📦 12 published games across Steam, itch.io, and mobile platforms",
       "🌍 10,000+ players worldwide across various titles",
@@ -132,7 +269,7 @@
   "contact": {
     "eyebrow": "Let's Connect",
     "title": "Ready to collaborate?",
-    "subtitle": "Whether you're looking for a game developer, want to discuss a project, or just chat about games — I'd love to hear from you!",
+    "subtitle": "Whether you're looking for a game developer, want to discuss a project, or just chat about games - I'd love to hear from you!",
     "bullets": [
       "Available for freelance game development projects",
       "Open to collaboration and team opportunities",
@@ -144,7 +281,7 @@
     }
   },
   "footer": {
-    "text": "Crafting games with passion",
+    "text": "Crafting games with skill in hand",
     "legal": "© Mikołaj Gajewski"
   }
 }

@@ -4,12 +4,12 @@
     "code": "pl"
   },
   "site": {
-    "title": "Mikołaj Gajewski — Twórca Gier",
-    "eyebrow": "Twórca i Designer Gier",
+    "title": "Mikołaj Gajewski - Twórca Gier",
+    "eyebrow": "Programista Gier",
     "tagline": "Tworzenie wciągających doświadczeń w grach"
   },
   "nav": [
-    { "label": "Gry", "href": "#games" },
+    { "label": "Gry", "href": "#games-published" },
     { "label": "Umiejętności", "href": "#skills" },
     { "label": "Kod", "href": "#code" },
     { "label": "Kontakt", "href": "#contact" }
@@ -28,8 +28,145 @@
       { "value": "12", "label": "wydanych projektów" },
       { "value": "10K+", "label": "graczy na świecie" }
     ],
-    "ctaPrimary": { "label": "Zobacz Moje Gry", "href": "#games" },
+    "ctaPrimary": { "label": "Zobacz Moje Gry", "href": "#games-published" },
     "ctaSecondary": { "label": "Skontaktuj Się", "href": "#contact" }
+  },
+  "published": {
+    "eyebrow": "Opublikowane Gry",
+    "title": "Wydane Projekty",
+    "subtitle": "Komercyjnie wydane gry dostępne na różnych platformach.",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "Neon Velocity",
+        "description": "Szybka gra wyścigowa w cyberpunkowym stylu z proceduralnie generowanymi torami i rywalizacją wieloosobową.",
+        "role": "Główny Programista i Designer",
+        "responsibilities": [
+          "Projektowanie i implementacja mechanik wyścigowych",
+          "Budowa systemu proceduralnej generacji tras",
+          "Rozwój infrastruktury sieciowej multiplayer",
+          "Tworzenie UI/UX i efektów wizualnych"
+        ],
+        "specs": [
+          "Wydana na Steam (2023)",
+          "85% pozytywnych recenzji",
+          "10,000+ pobrań"
+        ]
+      },
+      {
+        "badge": "Unreal",
+        "title": "Shadow's Echo",
+        "description": "Atmosferyczna gra platformowa z unikalnymi mechanikami manipulacji cieniem i ręcznie wykonanymi poziomami.",
+        "role": "Solowy Programista",
+        "responsibilities": [
+          "Rozwój niestandardowego systemu fizyki cieni",
+          "Projektowanie i budowa 20+ poziomów logicznych",
+          "Implementacja kontrolera postaci i ruchu",
+          "Tworzenie systemów oświetlenia i atmosfery"
+        ],
+        "specs": [
+          "Zwycięzca: Indie Game Festival 2024",
+          "20+ godzin rozgrywki",
+          "Wyróżniona na IndieDB"
+        ]
+      }
+    ]
+  },
+  "gamejam": {
+    "eyebrow": "Game Jamy",
+    "title": "Projekty z Game Jamów",
+    "subtitle": "Szybkie projekty stworzone podczas game jamów i hackathonów.",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "Time Loop Escape",
+        "description": "Gra logiczna, w której manipulujesz pętlami czasowymi, aby rozwiązać wyzwania. Stworzona w 48 godzin na Ludum Dare.",
+        "role": "Programista i Designer",
+        "responsibilities": [
+          "Implementacja mechanik pętli czasowych",
+          "Projektowanie 10 poziomów logicznych",
+          "Programowanie sterowania gracza i interakcji"
+        ],
+        "specs": [
+          "Ludum Dare 48 (2024)",
+          "Top 10% w Innowacyjności",
+          "2,000+ zagrań na itch.io"
+        ]
+      },
+      {
+        "badge": "Godot",
+        "title": "Pixel Dungeon Crawler",
+        "description": "Roguelike crawler lochów z proceduralną generacją i turową walką.",
+        "role": "Główny Programista",
+        "responsibilities": [
+          "Rozwój algorytmu generacji lochów BSP",
+          "Implementacja turowego systemu walki",
+          "Tworzenie systemów przedmiotów i ekwipunku"
+        ],
+        "specs": [
+          "Global Game Jam 2023",
+          "500+ przedmiotów i umiejętności",
+          "Multi-platforma (PC, Mobile)"
+        ]
+      },
+      {
+        "badge": "GameMaker",
+        "title": "Astral Survivors",
+        "description": "Strzelanka przetrwania z progresją w stylu rogue-lite.",
+        "role": "Solowy Programista",
+        "responsibilities": [
+          "Programowanie AI wrogów i systemów spawnowania",
+          "Projektowanie mechanik ulepszania broni",
+          "Implementacja efektów wizualnych i cząsteczek"
+        ],
+        "specs": [
+          "Mini Jam 72 godziny",
+          "5,000+ zagrań",
+          "Ocena 4.5/5 gwiazdek"
+        ]
+      }
+    ]
+  },
+  "private": {
+    "eyebrow": "Projekty Osobiste",
+    "title": "W Trakcie Rozwoju",
+    "subtitle": "Prywatne eksperymenty i projekty obecnie w fazie rozwoju.",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "Quantum Shift",
+        "description": "Sci-fi gra logiczna eksplorująca koncepcje mechaniki kwantowej poprzez rozgrywkę.",
+        "role": "Solowy Programista",
+        "responsibilities": [
+          "Projektowanie mechanik inspirowanych fizyką kwantową",
+          "Prototypowanie systemów logicznych",
+          "Eksperymentowanie z efektami shaderów",
+          "Budowa modularnych narzędzi do designu poziomów"
+        ],
+        "specs": [
+          "W rozwoju (2024-obecnie)",
+          "Unity 2022 LTS",
+          "Cel: Steam i itch.io"
+        ]
+      },
+      {
+        "badge": "Unreal",
+        "title": "Prototyp Areny Multiplayer",
+        "description": "Eksperymentalna arena walki multiplayer z unikalnym systemem zdolności.",
+        "role": "Programista Rozgrywki",
+        "responsibilities": [
+          "Implementacja sieciowego systemu zdolności",
+          "Projektowanie klas postaci i balansu",
+          "Budowa map aren i celów",
+          "Testowanie synchronizacji multiplayer"
+        ],
+        "specs": [
+          "Wczesny etap prototypu",
+          "Unreal Engine 5.3",
+          "Architektura dedykowanego serwera"
+        ]
+      }
+    ]
   },
   "games": {
     "eyebrow": "Portfolio",
@@ -121,7 +258,7 @@
     "title": "Doświadczenie i Osiągnięcia",
     "subtitle": "Najważniejsze momenty z mojej podróży w tworzeniu gier.",
     "points": [
-      "🏆 Zwycięzca: Najlepsza Gra Indie — Indie Game Festival 2024",
+      "🏆 Zwycięzca: Najlepsza Gra Indie - Indie Game Festival 2024",
       "🎮 5+ lat profesjonalnego doświadczenia w tworzeniu gier",
       "📦 12 opublikowanych gier na Steam, itch.io i platformach mobilnych",
       "🌍 10,000+ graczy na całym świecie w różnych tytułach",
@@ -132,7 +269,7 @@
   "contact": {
     "eyebrow": "Nawiążmy Kontakt",
     "title": "Gotowy na współpracę?",
-    "subtitle": "Czy szukasz twórcy gier, chcesz omówić projekt, czy po prostu porozmawiać o grach — chętnie się skontaktuję!",
+    "subtitle": "Czy szukasz twórcy gier, chcesz omówić projekt, czy po prostu porozmawiać o grach - chętnie się skontaktuję!",
     "bullets": [
       "Dostępny dla freelance projektów gier",
       "Otwarty na współpracę i możliwości zespołowe",

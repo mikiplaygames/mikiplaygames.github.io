@@ -23,12 +23,19 @@ const selectors = {
   heroStats: document.getElementById('hero-stats'),
   heroCtaPrimary: document.getElementById('hero-cta-primary'),
   heroCtaSecondary: document.getElementById('hero-cta-secondary'),
-  gamesHead: {
-    eyebrow: document.querySelector('[data-slot="games-eyebrow"]'),
-    title: document.querySelector('[data-slot="games-title"]'),
-    subtitle: document.querySelector('[data-slot="games-subtitle"]')
+  projectTabs: Array.from(document.querySelectorAll('.project-tab')),
+  projectPanels: Array.from(document.querySelectorAll('.project-panel')),
+  tabLabels: {
+    published: document.querySelector('[data-slot="tab-published-label"]'),
+    gamejam: document.querySelector('[data-slot="tab-gamejam-label"]'),
+    private: document.querySelector('[data-slot="tab-private-label"]')
   },
-  gamesGrid: document.getElementById('games-grid'),
+  publishedSubtitle: document.querySelector('[data-slot="published-subtitle"]'),
+  publishedGrid: document.getElementById('published-grid'),
+  gamejamSubtitle: document.querySelector('[data-slot="gamejam-subtitle"]'),
+  gamejamGrid: document.getElementById('gamejam-grid'),
+  privateSubtitle: document.querySelector('[data-slot="private-subtitle"]'),
+  privateGrid: document.getElementById('private-grid'),
   skillsHead: {
     eyebrow: document.querySelector('[data-slot="skills-eyebrow"]'),
     title: document.querySelector('[data-slot="skills-title"]'),
@@ -70,6 +77,32 @@ function setupNavFocus() {
   if (!nav) return;
   nav.addEventListener('focusin', () => nav.classList.add('focused'));
   nav.addEventListener('focusout', () => nav.classList.remove('focused'));
+}
+
+function setupProjectTabs() {
+  if (!selectors.projectTabs || selectors.projectTabs.length === 0) return;
+  
+  selectors.projectTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetTab = tab.dataset.tab;
+      switchProjectTab(targetTab);
+    });
+  });
+}
+
+function switchProjectTab(tabName) {
+  // Update tabs
+  selectors.projectTabs.forEach(tab => {
+    const isActive = tab.dataset.tab === tabName;
+    tab.classList.toggle('project-tab--active', isActive);
+    tab.setAttribute('aria-selected', String(isActive));
+  });
+
+  // Update panels
+  selectors.projectPanels.forEach(panel => {
+    const isActive = panel.dataset.panel === tabName;
+    panel.classList.toggle('project-panel--hidden', !isActive);
+  });
 }
 
 function normalizeLocale(input) {
@@ -134,6 +167,42 @@ function renderServices(cards = []) {
         <ul>
           ${(card.specs || []).map(spec => `<li>${spec}</li>`).join('')}
         </ul>
+      </article>
+    `
+  );
+}
+
+function renderGameCards(gridElement, cards = []) {
+  renderList(
+    gridElement,
+    cards,
+    card => `
+      <article class="service-card game-card">
+        <header>
+          <span class="badge">${card.badge ?? ''}</span>
+          <h4>${card.title ?? ''}</h4>
+        </header>
+        <p class="game-card__description">${card.description ?? ''}</p>
+        ${card.role ? `
+          <div class="game-card__role">
+            <strong>Role:</strong> ${card.role}
+          </div>
+        ` : ''}
+        ${card.responsibilities && card.responsibilities.length > 0 ? `
+          <div class="game-card__responsibilities">
+            <strong>Key Contributions:</strong>
+            <ul>
+              ${card.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+        ${card.specs && card.specs.length > 0 ? `
+          <div class="game-card__specs">
+            <ul>
+              ${card.specs.map(spec => `<li>${spec}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
       </article>
     `
   );
@@ -217,11 +286,34 @@ function applyLocaleToDom(data, localeCode) {
 
   if (data?.nav) renderNavigation(data.nav);
 
-  if (data?.games) {
-    selectors.gamesHead.eyebrow.textContent = data.games.eyebrow ?? '';
-    selectors.gamesHead.title.textContent = data.games.title ?? '';
-    selectors.gamesHead.subtitle.textContent = data.games.subtitle ?? '';
-    renderServices(data.games.cards);
+  if (data?.published) {
+    if (selectors.publishedSubtitle) {
+      selectors.publishedSubtitle.textContent = data.published.subtitle ?? '';
+    }
+    if (selectors.tabLabels.published) {
+      selectors.tabLabels.published.textContent = data.published.tabLabel ?? 'Published';
+    }
+    renderGameCards(selectors.publishedGrid, data.published.cards);
+  }
+
+  if (data?.gamejam) {
+    if (selectors.gamejamSubtitle) {
+      selectors.gamejamSubtitle.textContent = data.gamejam.subtitle ?? '';
+    }
+    if (selectors.tabLabels.gamejam) {
+      selectors.tabLabels.gamejam.textContent = data.gamejam.tabLabel ?? 'Game Jams';
+    }
+    renderGameCards(selectors.gamejamGrid, data.gamejam.cards);
+  }
+
+  if (data?.private) {
+    if (selectors.privateSubtitle) {
+      selectors.privateSubtitle.textContent = data.private.subtitle ?? '';
+    }
+    if (selectors.tabLabels.private) {
+      selectors.tabLabels.private.textContent = data.private.tabLabel ?? 'Personal';
+    }
+    renderGameCards(selectors.privateGrid, data.private.cards);
   }
 
   if (data?.skills) {
@@ -300,6 +392,7 @@ function initLanguageToggle(currentLocale) {
 function init() {
   setCurrentYear();
   setupNavFocus();
+  setupProjectTabs();
   const stored = localStorage.getItem(STORAGE_KEY);
   const browser = navigator.language || navigator.userLanguage;
   const initialLocale = normalizeLocale(stored || browser);
