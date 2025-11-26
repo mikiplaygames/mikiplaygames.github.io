@@ -31,27 +31,32 @@
 		</div>
 
 		<main id="main" class="shell">
-			<section id="hero" class="panel hero">
-				<div class="hero__text">
-					<p class="eyebrow" data-slot="hero-eyebrow">Indie Game Developer</p>
-					<h2 data-slot="hero-title">Building worlds players love to explore.</h2>
-					<p class="lead" data-slot="hero-subtitle">
-						Passionate game developer specializing in gameplay mechanics, level design, and player experience.
-					</p>
-					<ul id="hero-bullets" class="hero__bullets"></ul>
-					<div class="hero__ctas">
-						<a id="hero-cta-primary" class="btn btn--primary" href="#games">View My Games</a>
-						<a id="hero-cta-secondary" class="btn btn--ghost" href="#contact">Get in Touch</a>
-					</div>
+			<section id="about" class="panel section">
+				<header class="section__head">
+					<p class="eyebrow" data-slot="about-eyebrow">About Me</p>
+					<h2 data-slot="about-title">Game Developer & Creative Problem Solver</h2>
+					<p data-slot="about-subtitle">Passionate about creating engaging gameplay experiences.</p>
+				</header>
+			<div class="about-content">
+				<div class="about-content__profile">
+					<img src="/IMG/ja.jpeg" alt="Mikołaj Gajewski" class="about-profile-image" />
+					<div class="about-content__stats" id="about-stats" aria-live="polite"></div>
 				</div>
-				<div class="hero__stats" id="hero-stats" aria-live="polite"></div>
+				<div class="about-content__text">
+					<p class="lead" data-slot="about-intro">
+						Hello! I'm Mikołaj, an indie game developer with a passion for creating immersive worlds and memorable gameplay experiences.
+					</p>
+					<div id="about-paragraphs"></div>
+					<ul id="about-highlights" class="about-highlights"></ul>
+				</div>
+			</div>
 			</section>
 
-			<section id="games-published" class="panel section">
+			<section id="projects" class="panel section">
 				<header class="section__head">
-					<p class="eyebrow">Portfolio</p>
-					<h3>My Game Projects</h3>
-					<p>Explore my work across different categories.</p>
+					<p class="eyebrow" data-slot="projects-eyebrow">Portfolio</p>
+					<h3 data-slot="projects-title">My Game Projects</h3>
+					<p data-slot="projects-subtitle">Explore my work across different categories.</p>
 				</header>
 				
 				<div class="project-tabs" role="tablist" aria-label="Project categories">
@@ -118,7 +123,9 @@
 					<p data-slot="contact-subtitle"></p>
 				</header>
 				<ul id="contact-list" class="contact__list"></ul>
-				<a id="contact-cta" class="btn btn--primary"></a>
+				<div class="contact__cta-wrapper">
+					<a id="contact-cta" class="btn btn--primary"></a>
+				</div>
 			</section>
 		</main>
 

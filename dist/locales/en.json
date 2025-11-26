@@ -3,148 +3,259 @@
     "language": "English",
     "code": "en"
   },
+  "ui": {
+    "role": "Role:",
+    "keyContributions": "Key Contributions:",
+    "viewOnSteam": "View on Steam"
+  },
   "site": {
-    "title": "Mikołaj Gajewski - Game Developer",
-    "eyebrow": "Game Developer",
-    "tagline": "Creating immersive gaming experiences"
+    "title": "Mikołaj Gajewski - Game Programmer",
+    "eyebrow": "Game Programmer",
+    "tagline": "I create scalable and optimal code"
   },
   "nav": [
-    { "label": "Games", "href": "#games" },
+    { "label": "About", "href": "#about" },
+    { "label": "Games", "href": "#projects" },
     { "label": "Skills", "href": "#skills" },
-    { "label": "Code", "href": "#code" },
+    { "label": "Interesting Code", "href": "#code" },
     { "label": "Contact", "href": "#contact" }
   ],
-  "hero": {
-    "eyebrow": "Indie Game Developer",
-    "title": "Building worlds players love to explore.",
-    "subtitle": "Passionate game developer specializing in gameplay mechanics, immersive level design, and exceptional player experiences across multiple platforms.",
-    "bullets": [
-      "Unity & Unreal Engine expertise",
-      "Published indie games on Steam & itch.io",
-      "Strong focus on player-centered design"
+  "about": {
+    "eyebrow": "About Me",
+    "title": "Game Programmer & Jack of All Trades",
+    "subtitle": "Passionate about how things work under the hood.",
+    "intro": "Hello! I'm Mikołaj, an indie game developer with a passion for creating the best games powered by best code.",
+    "paragraphs": [
+      "In more than 4 years, I've gained a lot of experience in programming. With each project I learn something new or improved what I had already known. My adventure with game development started with the desire to improve a game I was playing and that's how the 'TheHidden' project was born.",
+      "I specialize in game mechanics programming, optimization and testing. I work using the Unity engine, but it's not the only thing I know ;)",
+      "When I'm not coding, I'm either riding my moped or fixing it. For relaxation, I read books."
+    ],
+    "highlights": [
     ],
     "stats": [
-      { "value": "5+", "label": "years experience" },
-      { "value": "12", "label": "shipped projects" },
-      { "value": "10K+", "label": "players worldwide" }
-    ],
-    "ctaPrimary": { "label": "View My Games", "href": "#games" },
-    "ctaSecondary": { "label": "Get in Touch", "href": "#contact" }
+      { "value": "4+", "label": "years experience" },
+      { "value": "2", "label": "shipped projects" },
+      { "value": "8", "label": "game jam games" },
+      { "value": "3", "label": "awards" }
+    ]
   },
-  "games": {
+  "projects": {
     "eyebrow": "Portfolio",
-    "title": "Featured Game Projects",
-    "subtitle": "A selection of my most exciting game development work, from fast-paced action to atmospheric puzzle games.",
+    "title": "My Game Projects",
+    "subtitle": "Explore my work across different categories."
+  },
+  "published": {
+    "tabLabel": "Published",
+    "eyebrow": "Published Games",
+    "title": "Released Projects",
+    "subtitle": "Commercially released games available on various platforms.",
     "cards": [
       {
         "badge": "Unity",
-        "title": "Neon Velocity",
-        "description": "Fast-paced cyberpunk racing game with procedurally generated tracks and competitive multiplayer.",
+        "title": "Gauntler",
+        "description": "2D pixelart platformer, the game is about escaping from a cave",
+        "role": "Lead Programmer",
+        "link": "https://store.steampowered.com/app/2789380/",
+        "responsibilities": [
+          "Supervision and management of programmers",
+          "Player movement",
+          "Checkpoints",
+          "Steam API (achievements, cloud save)",
+          "Several obstacles"
+        ],
         "specs": [
-          "Released on Steam (2023)",
-          "85% positive reviews",
-          "Networked multiplayer system"
+          "Released on Steam and Nintendo"
         ]
       },
       {
-        "badge": "Unreal",
-        "title": "Shadow's Echo",
-        "description": "Atmospheric puzzle-platformer featuring unique shadow manipulation mechanics and hand-crafted levels.",
+        "badge": "Unity",
+        "title": "BabushCats",
+        "description": "Casual creature collector, the game is about taking care of cats and fighting their nightmares at night",
+        "role": "Solo Programmer",
+        "link": "https://store.steampowered.com/app/2923270/",
+        "responsibilities": [
+          "All mechanics in the game",
+          "Game save system",
+          "NPCs, enemies",
+          "Combat systems, weapons and abilities",
+          "Object upgrades",
+          "UI and minigames design",
+          "Sound and triggers programming",
+          "Tools for designers"
+        ],
         "specs": [
-          "Winner: Indie Game Festival 2024",
-          "Custom physics-based puzzles",
-          "20+ hours of gameplay"
+          "Award from the President of the City of Łódź",
+          "Digital Dragons Award",
+          "Intel Special Award"
+        ]
+      }
+    ]
+  },
+  "gamejam": {
+    "tabLabel": "Game Jams",
+    "eyebrow": "Game Jams",
+    "title": "Game Jam Projects",
+    "subtitle": "Fast-paced projects created during / for game jams.",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "Skewered",
+        "description": "Mobile game for ZTGK game jam, satisfying game about skewering food in different patterns.",
+        "role": "Lead Programmer",
+        "responsibilities": [
+          "Skewering system",
+          "Skins",
+          "'Randomness' of food and pattern",
+          "Mobile optimization"
+        ],
+        "specs": [
+          "Really satisfying"
         ]
       },
       {
-        "badge": "Godot",
-        "title": "Pixel Dungeon Crawler",
-        "description": "Roguelike dungeon crawler with procedural generation, turn-based combat, and retro aesthetics.",
+        "badge": "Unity",
+        "title": "Prank Prison",
+        "description": "Multiplayer game on 1 screen, where players compete to escape from prison first, while trying to prevent others from escaping.",
+        "role": "Lead Programmer",
+        "responsibilities": [
+          "Items and pushing mechanics",
+          "Input for multiple players",
+          "Guard movement and attack",
+          "Sound programming"
+        ],
         "specs": [
-          "500+ items and abilities",
-          "Procedural dungeon generation",
-          "Cross-platform (PC, Mobile)"
+          "2 games in a week"
+        ]
+      },
+      {
+        "badge": "Unity",
+        "title": "Slap the Fly",
+        "description": "Mobile game for ZTGK game jam, satisfying clicker about swatting flies.",
+        "role": "Solo Programmer",
+        "responsibilities": [
+          "Programming different flies",
+          "Creating a system of specific and repeatable fly movements",
+          "Adding special abilities",
+          "Sound programming"
+        ],
+        "specs": [
+          "2 games in a week"
+        ]
+      }
+    ]
+  },
+  "private": {
+    "tabLabel": "Personal",
+    "eyebrow": "Personal Projects",
+    "title": "Work in Progress",
+    "subtitle": "Private experiments and projects currently* in development.  (*or on hold)",
+    "cards": [
+      {
+        "badge": "Unity",
+        "title": "The Hidden",
+        "description": "HDRP multiplayer horror FPS, where one player is a barely visible demon hunter with a knife, and the IRIS squad's task is to eliminate him.",
+        "role": "Jack of All Trades",
+        "responsibilities": [
+          "Weapon and item systems",
+          "Performance optimization",
+          "NetCode multiplayer gameplay programming"
+        ],
+        "specs": [
+          "Client-server architecture",
+          "Friends liked it"
+        ]
+      },
+      {
+        "badge": "Unity",
+        "title": "Portal 2D",
+        "description": "Light 2D game based on Portal where you need to move quickly and use portals.",
+        "role": "Jack of All Trades",
+        "responsibilities": [
+          "Portals and their functionality",
+          "Player movement mechanics",
+          "Good synchronization and physics in multiplayer"
+        ],
+        "specs": [
+          "Client-server architecture"
         ]
       }
     ]
   },
   "skills": {
-    "eyebrow": "Technologies",
-    "title": "Tools & Expertise",
-    "subtitle": "Proficient in industry-standard game engines, programming languages, and creative tools.",
+    "eyebrow": "Technical Skills",
+    "title": "Technologies I Know",
+    "subtitle": "Learning more every day.",
     "categories": [
       {
-        "name": "Game Engines",
-        "items": ["Unity 3D", "Unreal Engine 5", "Godot", "GameMaker"]
+        "name": "Frameworks",
+        "items": ["NetCode for GameObjects", "FMOD", "LeanTween", "Cinemachine"]
       },
       {
         "name": "Programming",
-        "items": ["C#", "C++", "Python", "GDScript", "JavaScript"]
+        "items": ["C#", "C++", "Python", "JavaScript"]
       },
       {
         "name": "Tools & Design",
-        "items": ["Blender", "Photoshop", "Git", "Jira", "Aseprite"]
+        "items": ["Visual Studio Code", "Photoshop", "Git", "GitHub Actions", "GitHub Projects", "Aseprite"]
       },
       {
         "name": "Specializations",
-        "items": ["Gameplay Systems", "AI Behavior", "Multiplayer", "Procedural Generation"]
+        "items": ["Gameplay Mechanics", "UI", "Logic Systems", "Multiplayer"]
       }
     ]
   },
   "code": {
     "eyebrow": "Code Showcase",
-    "title": "Best of Code",
-    "subtitle": "Clean, efficient solutions to interesting game development challenges.",
+    "title": "Interesting Code",
+    "subtitle": "Maybe someone will find it useful :p",
     "snippets": [
       {
-        "title": "Efficient Object Pooling",
+        "title": "something interesting",
         "language": "C#",
-        "description": "Memory-efficient object pooling system for high-performance projectile spawning.",
-        "code": "public class ObjectPool<T> where T : MonoBehaviour\n{\n    private Queue<T> pool = new Queue<T>();\n    private T prefab;\n    \n    public T Get()\n    {\n        return pool.Count > 0 ? pool.Dequeue() : \n               Object.Instantiate(prefab);\n    }\n    \n    public void Return(T obj)\n    {\n        obj.gameObject.SetActive(false);\n        pool.Enqueue(obj);\n    }\n}"
+        "description": "TODO",
+        "code": ""
       },
       {
-        "title": "Procedural Dungeon Generator",
-        "language": "Python",
-        "description": "BSP-based algorithm for generating random dungeon layouts with guaranteed connectivity.",
-        "code": "def generate_dungeon(width, height, min_room_size):\n    root = BSPNode(0, 0, width, height)\n    root.split(min_room_size)\n    rooms = root.get_rooms()\n    corridors = connect_rooms(rooms)\n    return Dungeon(rooms, corridors)"
+        "title": "something interesting",
+        "language": "C#",
+        "description": "TODO",
+        "code": ""
       },
       {
-        "title": "Smooth Camera Follow",
+        "title": "something interesting",
         "language": "C#",
-        "description": "Responsive camera system with smoothing and look-ahead prediction for platformers.",
-        "code": "void LateUpdate()\n{\n    Vector3 targetPos = target.position + \n        target.velocity.normalized * lookAhead;\n    transform.position = Vector3.Lerp(\n        transform.position, \n        targetPos, \n        smoothSpeed * Time.deltaTime\n    );\n}"
+        "description": "TODO",
+        "code": ""
       }
     ]
   },
   "experience": {
-    "eyebrow": "Background",
+    "eyebrow": "Experience",
     "title": "Experience & Achievements",
     "subtitle": "Highlights from my game development journey.",
     "points": [
-      "🏆 Winner: Best Indie Game - Indie Game Festival 2024",
-      "🎮 5+ years of professional game development experience",
-      "📦 12 published games across Steam, itch.io, and mobile platforms",
-      "🌍 10,000+ players worldwide across various titles",
-      "💻 Open-source contributor to Godot Engine and game dev tools",
-      "🎓 Mentored 20+ aspiring game developers through online courses"
+      "🏆 3 awards at ZTGK for BabushCats project",
+      "🎮 4+ years of game development",
+      "📦 Many projects where I learned a lot",
+      "🌍 Trips to conferences and game showcases like Taipei Game Show or DevGamm Lisbon",
+      "🎓 Mentor for young programmers in the game development club at ZSŁ highschool"
     ]
   },
   "contact": {
     "eyebrow": "Let's Connect",
     "title": "Ready to collaborate?",
-    "subtitle": "Whether you're looking for a game developer, want to discuss a project, or just chat about games - I'd love to hear from you!",
+    "subtitle": "If you're looking for a game programmer, want to discuss a project, or just chat about games - feel free to reach out!",
     "bullets": [
-      "Available for freelance game development projects",
-      "Open to collaboration and team opportunities",
-      "Happy to discuss game design and development"
+      "Happy to take on new challenges",
+      "Open to collaboration and help on various projects"
     ],
     "cta": {
-      "label": "Email me",
-      "href": "mailto:contact@mikiplaygames.dev?subject=Let's%20talk%20about%20games"
+      "label": "Write to me!",
+      "href": "mailto:mikirog2080@gmail.com?subject=Throw_the_topic_:)"
     }
   },
   "footer": {
-    "text": "Crafting games with skill in hand",
+    "text": "Creating games with a clear mind and steady hand",
     "legal": "© Mikołaj Gajewski"
   }
 }

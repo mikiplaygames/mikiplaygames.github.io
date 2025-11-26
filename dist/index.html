@@ -4,8 +4,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title id="document-title">Mikołaj Gajewski - Game Developer Portfolio</title>
-		<script type="module" crossorigin src="/assets/index-CBSn0IBV.js"></script>
-		<link rel="stylesheet" crossorigin href="/assets/index-B7rf7hst.css">
+		<script type="module" crossorigin src="/assets/index-Bu7V2mZf.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/index-D48eCv5i.css">
 	</head>
 	<body>
 		<a class="skip-link" href="#main">Skip to content</a>
@@ -32,29 +32,62 @@
 		</div>
 
 		<main id="main" class="shell">
-			<section id="hero" class="panel hero">
-				<div class="hero__text">
-					<p class="eyebrow" data-slot="hero-eyebrow">Indie Game Developer</p>
-					<h2 data-slot="hero-title">Building worlds players love to explore.</h2>
-					<p class="lead" data-slot="hero-subtitle">
-						Passionate game developer specializing in gameplay mechanics, level design, and player experience.
-					</p>
-					<ul id="hero-bullets" class="hero__bullets"></ul>
-					<div class="hero__ctas">
-						<a id="hero-cta-primary" class="btn btn--primary" href="#games">View My Games</a>
-						<a id="hero-cta-secondary" class="btn btn--ghost" href="#contact">Get in Touch</a>
-					</div>
+			<section id="about" class="panel section">
+				<header class="section__head">
+					<p class="eyebrow" data-slot="about-eyebrow">About Me</p>
+					<h2 data-slot="about-title">Game Developer & Creative Problem Solver</h2>
+					<p data-slot="about-subtitle">Passionate about creating engaging gameplay experiences.</p>
+				</header>
+			<div class="about-content">
+				<div class="about-content__profile">
+					<img src="/assets/ja-83O9yoNj.jpeg" alt="Mikołaj Gajewski" class="about-profile-image" />
+					<div class="about-content__stats" id="about-stats" aria-live="polite"></div>
 				</div>
-				<div class="hero__stats" id="hero-stats" aria-live="polite"></div>
+				<div class="about-content__text">
+					<p class="lead" data-slot="about-intro">
+						Hello! I'm Mikołaj, an indie game developer with a passion for creating immersive worlds and memorable gameplay experiences.
+					</p>
+					<div id="about-paragraphs"></div>
+					<ul id="about-highlights" class="about-highlights"></ul>
+				</div>
+			</div>
 			</section>
 
-			<section id="games" class="panel section">
+			<section id="projects" class="panel section">
 				<header class="section__head">
-					<p class="eyebrow" data-slot="games-eyebrow">Portfolio</p>
-					<h3 data-slot="games-title">Featured Game Projects</h3>
-					<p data-slot="games-subtitle">A selection of my most exciting game development work.</p>
+					<p class="eyebrow" data-slot="projects-eyebrow">Portfolio</p>
+					<h3 data-slot="projects-title">My Game Projects</h3>
+					<p data-slot="projects-subtitle">Explore my work across different categories.</p>
 				</header>
-				<div id="games-grid" class="grid-cards" aria-live="polite"></div>
+				
+				<div class="project-tabs" role="tablist" aria-label="Project categories">
+					<button class="project-tab" role="tab" aria-selected="true" aria-controls="published-panel" id="tab-published" data-tab="published">
+						<span data-slot="tab-published-label">Published</span>
+					</button>
+					<button class="project-tab" role="tab" aria-selected="false" aria-controls="gamejam-panel" id="tab-gamejam" data-tab="gamejam">
+						<span data-slot="tab-gamejam-label">Game Jams</span>
+					</button>
+					<button class="project-tab" role="tab" aria-selected="false" aria-controls="private-panel" id="tab-private" data-tab="private">
+						<span data-slot="tab-private-label">Personal</span>
+					</button>
+				</div>
+
+				<div class="project-panels">
+					<div id="published-panel" class="project-panel" role="tabpanel" aria-labelledby="tab-published" data-panel="published">
+						<p class="project-panel__subtitle" data-slot="published-subtitle">Commercially released games available on various platforms.</p>
+						<div id="published-grid" class="grid-cards" aria-live="polite"></div>
+					</div>
+
+					<div id="gamejam-panel" class="project-panel project-panel--hidden" role="tabpanel" aria-labelledby="tab-gamejam" data-panel="gamejam">
+						<p class="project-panel__subtitle" data-slot="gamejam-subtitle">Fast-paced projects created during game jams and hackathons.</p>
+						<div id="gamejam-grid" class="grid-cards" aria-live="polite"></div>
+					</div>
+
+					<div id="private-panel" class="project-panel project-panel--hidden" role="tabpanel" aria-labelledby="tab-private" data-panel="private">
+						<p class="project-panel__subtitle" data-slot="private-subtitle">Private experiments and projects currently in development.</p>
+						<div id="private-grid" class="grid-cards" aria-live="polite"></div>
+					</div>
+				</div>
 			</section>
 
 			<section id="skills" class="panel section section--dark">
@@ -91,7 +124,9 @@
 					<p data-slot="contact-subtitle"></p>
 				</header>
 				<ul id="contact-list" class="contact__list"></ul>
-				<a id="contact-cta" class="btn btn--primary"></a>
+				<div class="contact__cta-wrapper">
+					<a id="contact-cta" class="btn btn--primary"></a>
+				</div>
 			</section>
 		</main>
 

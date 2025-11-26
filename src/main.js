@@ -16,13 +16,18 @@ const selectors = {
   brandEyebrow: document.querySelector('[data-slot="brand-eyebrow"]'),
   brandTitle: document.querySelector('[data-slot="brand-title"]'),
   brandTagline: document.querySelector('[data-slot="brand-tagline"]'),
-  heroEyebrow: document.querySelector('[data-slot="hero-eyebrow"]'),
-  heroTitle: document.querySelector('[data-slot="hero-title"]'),
-  heroSubtitle: document.querySelector('[data-slot="hero-subtitle"]'),
-  heroBullets: document.getElementById('hero-bullets'),
-  heroStats: document.getElementById('hero-stats'),
-  heroCtaPrimary: document.getElementById('hero-cta-primary'),
-  heroCtaSecondary: document.getElementById('hero-cta-secondary'),
+  aboutEyebrow: document.querySelector('[data-slot="about-eyebrow"]'),
+  aboutTitle: document.querySelector('[data-slot="about-title"]'),
+  aboutSubtitle: document.querySelector('[data-slot="about-subtitle"]'),
+  aboutIntro: document.querySelector('[data-slot="about-intro"]'),
+  aboutParagraphs: document.getElementById('about-paragraphs'),
+  aboutHighlights: document.getElementById('about-highlights'),
+  aboutStats: document.getElementById('about-stats'),
+  projectsHead: {
+    eyebrow: document.querySelector('[data-slot="projects-eyebrow"]'),
+    title: document.querySelector('[data-slot="projects-title"]'),
+    subtitle: document.querySelector('[data-slot="projects-subtitle"]')
+  },
   projectTabs: Array.from(document.querySelectorAll('.project-tab')),
   projectPanels: Array.from(document.querySelectorAll('.project-panel')),
   tabLabels: {
@@ -115,8 +120,7 @@ function normalizeLocale(input) {
 }
 
 async function loadLocale(locale) {
-  const basePath = import.meta.env.BASE_URL ?? '/';
-  const url = `${basePath.replace(/\/$/, '')}/locales/${locale}.json?cache-bust=${Date.now()}`;
+  const url = `/locales/${locale}.json?cache-bust=${Date.now()}`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Unable to load locale ${locale}: ${response.status}`);
@@ -136,13 +140,17 @@ function renderList(listEl, items = [], formatter = text => text) {
   listEl.innerHTML = items.map((item, index) => formatter(item, index)).join('');
 }
 
-function renderHeroBullets(bullets = []) {
-  renderList(selectors.heroBullets, bullets, bullet => `<li>${bullet}</li>`);
+function renderAboutParagraphs(paragraphs = []) {
+  renderList(selectors.aboutParagraphs, paragraphs, p => `<p>${p}</p>`);
 }
 
-function renderHeroStats(stats = []) {
+function renderAboutHighlights(highlights = []) {
+  renderList(selectors.aboutHighlights, highlights, item => `<li>${item}</li>`);
+}
+
+function renderAboutStats(stats = []) {
   renderList(
-    selectors.heroStats,
+    selectors.aboutStats,
     stats,
     stat => `
       <article class="stat-card">
@@ -172,7 +180,7 @@ function renderServices(cards = []) {
   );
 }
 
-function renderGameCards(gridElement, cards = []) {
+function renderGameCards(gridElement, cards = [], labels = { role: 'Role:', keyContributions: 'Key Contributions:', viewOnSteam: 'View on Steam' }) {
   renderList(
     gridElement,
     cards,
@@ -185,12 +193,12 @@ function renderGameCards(gridElement, cards = []) {
         <p class="game-card__description">${card.description ?? ''}</p>
         ${card.role ? `
           <div class="game-card__role">
-            <strong>Role:</strong> ${card.role}
+            <strong>${labels.role}</strong> ${card.role}
           </div>
         ` : ''}
         ${card.responsibilities && card.responsibilities.length > 0 ? `
           <div class="game-card__responsibilities">
-            <strong>Key Contributions:</strong>
+            <strong>${labels.keyContributions}</strong>
             <ul>
               ${card.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
             </ul>
@@ -201,6 +209,11 @@ function renderGameCards(gridElement, cards = []) {
             <ul>
               ${card.specs.map(spec => `<li>${spec}</li>`).join('')}
             </ul>
+          </div>
+        ` : ''}
+        ${card.link ? `
+          <div class="game-card__link">
+            <a href="${card.link}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">${labels.viewOnSteam}</a>
           </div>
         ` : ''}
       </article>
@@ -268,23 +281,23 @@ function applyLocaleToDom(data, localeCode) {
     selectors.brandTagline.textContent = data.site.tagline;
   }
 
-  if (data?.hero) {
-    selectors.heroEyebrow.textContent = data.hero.eyebrow ?? '';
-    selectors.heroTitle.textContent = data.hero.title ?? '';
-    selectors.heroSubtitle.textContent = data.hero.subtitle ?? '';
-    renderHeroBullets(data.hero.bullets);
-    renderHeroStats(data.hero.stats);
-    if (selectors.heroCtaPrimary && data.hero.ctaPrimary) {
-      selectors.heroCtaPrimary.textContent = data.hero.ctaPrimary.label;
-      selectors.heroCtaPrimary.href = data.hero.ctaPrimary.href;
-    }
-    if (selectors.heroCtaSecondary && data.hero.ctaSecondary) {
-      selectors.heroCtaSecondary.textContent = data.hero.ctaSecondary.label;
-      selectors.heroCtaSecondary.href = data.hero.ctaSecondary.href;
-    }
+  if (data?.about) {
+    selectors.aboutEyebrow.textContent = data.about.eyebrow ?? '';
+    selectors.aboutTitle.textContent = data.about.title ?? '';
+    selectors.aboutSubtitle.textContent = data.about.subtitle ?? '';
+    selectors.aboutIntro.textContent = data.about.intro ?? '';
+    renderAboutParagraphs(data.about.paragraphs);
+    renderAboutHighlights(data.about.highlights);
+    renderAboutStats(data.about.stats);
   }
 
   if (data?.nav) renderNavigation(data.nav);
+
+  if (data?.projects) {
+    selectors.projectsHead.eyebrow.textContent = data.projects.eyebrow ?? '';
+    selectors.projectsHead.title.textContent = data.projects.title ?? '';
+    selectors.projectsHead.subtitle.textContent = data.projects.subtitle ?? '';
+  }
 
   if (data?.published) {
     if (selectors.publishedSubtitle) {
@@ -293,7 +306,7 @@ function applyLocaleToDom(data, localeCode) {
     if (selectors.tabLabels.published) {
       selectors.tabLabels.published.textContent = data.published.tabLabel ?? 'Published';
     }
-    renderGameCards(selectors.publishedGrid, data.published.cards);
+    renderGameCards(selectors.publishedGrid, data.published.cards, data.ui);
   }
 
   if (data?.gamejam) {
@@ -303,7 +316,7 @@ function applyLocaleToDom(data, localeCode) {
     if (selectors.tabLabels.gamejam) {
       selectors.tabLabels.gamejam.textContent = data.gamejam.tabLabel ?? 'Game Jams';
     }
-    renderGameCards(selectors.gamejamGrid, data.gamejam.cards);
+    renderGameCards(selectors.gamejamGrid, data.gamejam.cards, data.ui);
   }
 
   if (data?.private) {
@@ -313,7 +326,7 @@ function applyLocaleToDom(data, localeCode) {
     if (selectors.tabLabels.private) {
       selectors.tabLabels.private.textContent = data.private.tabLabel ?? 'Personal';
     }
-    renderGameCards(selectors.privateGrid, data.private.cards);
+    renderGameCards(selectors.privateGrid, data.private.cards, data.ui);
   }
 
   if (data?.skills) {

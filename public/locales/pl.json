@@ -3,253 +3,229 @@
     "language": "Polski",
     "code": "pl"
   },
+  "ui": {
+    "role": "Rola:",
+    "keyContributions": "Główne zadania:",
+    "viewOnSteam": "Zobacz na Steam"
+  },
   "site": {
-    "title": "Mikołaj Gajewski - Twórca Gier",
+    "title": "Mikołaj Gajewski - Programista Gier",
     "eyebrow": "Programista Gier",
-    "tagline": "Tworzenie wciągających doświadczeń w grach"
+    "tagline": "Tworzę skalowalny i optymalny kod"
   },
   "nav": [
-    { "label": "Gry", "href": "#games-published" },
+    { "label": "O Mnie", "href": "#about" },
+    { "label": "Gry", "href": "#projects" },
     { "label": "Umiejętności", "href": "#skills" },
-    { "label": "Kod", "href": "#code" },
+    { "label": "Ciekawy Kod", "href": "#code" },
     { "label": "Kontakt", "href": "#contact" }
   ],
-  "hero": {
-    "eyebrow": "Niezależny Twórca Gier",
-    "title": "Buduję światy, które gracze uwielbiają eksplorować.",
-    "subtitle": "Pasjonat tworzenia gier specjalizujący się w mechanikach rozgrywki, immersyjnym poziomie designu i wyjątkowych doświadczeniach graczy na wielu platformach.",
-    "bullets": [
-      "Ekspert Unity i Unreal Engine",
-      "Opublikowane gry indie na Steam i itch.io",
-      "Silny nacisk na design skoncentrowany na graczu"
+  "about": {
+    "eyebrow": "O Mnie",
+    "title": "Programista Gier i złota rączka",
+    "subtitle": "Z pasją do tego, jak działają rzeczy pod maską.",
+    "intro": "Cześć! Jestem Mikołaj, niezależny twórca gier z pasją do tworzenia jak najlepszego kodu.",
+    "paragraphs": [
+      "Przez ponad 4 lata zdobyłem sporo doświadczenia w programowaniu, z każdym projektem uczę się czegoś nowego lub doskonalę to co już potrafię. Moja przygoda z tworzeniem gier zaczęła się od chęci ulepszenia gry w którą grałem i tak powstał projekt 'TheHidden'.",
+      "Specjalizuję się w programowaniu mechanik, optymalizacji i testowaniu. Pracuję używając silnika Unity, ale nie jest to jedyna rzecz którą potrafię ;)",
+      "Kiedy nie koduję to albo jeżdżę na motorowerze albo go naprawiam. Dla relaksu czytam książki."
+    ],
+    "highlights": [
     ],
     "stats": [
-      { "value": "5+", "label": "lat doświadczenia" },
-      { "value": "12", "label": "wydanych projektów" },
-      { "value": "10K+", "label": "graczy na świecie" }
-    ],
-    "ctaPrimary": { "label": "Zobacz Moje Gry", "href": "#games-published" },
-    "ctaSecondary": { "label": "Skontaktuj Się", "href": "#contact" }
+      { "value": "4+", "label": "lata doświadczenia" },
+      { "value": "2", "label": "wydane projekty" },
+      { "value": "8", "label": "gier na gamejamy" },
+      { "value": "3", "label": "nagrody" }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "title": "Moje Projekty Gier",
+    "subtitle": "Poznaj moje prace w różnych kategoriach."
   },
   "published": {
+    "tabLabel": "Opublikowane",
     "eyebrow": "Opublikowane Gry",
     "title": "Wydane Projekty",
     "subtitle": "Komercyjnie wydane gry dostępne na różnych platformach.",
     "cards": [
       {
         "badge": "Unity",
-        "title": "Neon Velocity",
-        "description": "Szybka gra wyścigowa w cyberpunkowym stylu z proceduralnie generowanymi torami i rywalizacją wieloosobową.",
-        "role": "Główny Programista i Designer",
+        "title": "Gauntler",
+        "description": "2d pixelart platformer, gra polega na wydostaniu się z jaskini",
+        "role": "Główny Programista",
+        "link": "https://store.steampowered.com/app/2789380/",
         "responsibilities": [
-          "Projektowanie i implementacja mechanik wyścigowych",
-          "Budowa systemu proceduralnej generacji tras",
-          "Rozwój infrastruktury sieciowej multiplayer",
-          "Tworzenie UI/UX i efektów wizualnych"
+          "Nadzór i zarządzenie programistami",
+          "Movement gracza",
+          "Checkpointy",
+          "Steam API (osiągnięcia, chmura)",
+          "Kilka przeszkód"
         ],
         "specs": [
-          "Wydana na Steam (2023)",
-          "85% pozytywnych recenzji",
-          "10,000+ pobrań"
+          "Wydana na Steam i Nintendo"
         ]
       },
       {
-        "badge": "Unreal",
-        "title": "Shadow's Echo",
-        "description": "Atmosferyczna gra platformowa z unikalnymi mechanikami manipulacji cieniem i ręcznie wykonanymi poziomami.",
-        "role": "Solowy Programista",
+        "badge": "Unity",
+        "title": "BabushCats",
+        "description": "Casual creature collector, gra polega na opiekowaniu się kotami, a w nocy walce z ich koszmarami",
+        "role": "Solo Programista",
+        "link": "https://store.steampowered.com/app/2923270/",
         "responsibilities": [
-          "Rozwój niestandardowego systemu fizyki cieni",
-          "Projektowanie i budowa 20+ poziomów logicznych",
-          "Implementacja kontrolera postaci i ruchu",
-          "Tworzenie systemów oświetlenia i atmosfery"
+          "Wszystkie mechaniki w grze",
+          "System zapisu gry",
+          "NPC, wrogowie",
+          "Systemy walki, bronie i umiejętności",
+          "Ulepszenia obiektów",
+          "Projektowanie UI i minigierek",
+          "Programowanie dzwięków i triggerów",
+          "Narzędzia dla designerów"
         ],
         "specs": [
-          "Zwycięzca: Indie Game Festival 2024",
-          "20+ godzin rozgrywki",
-          "Wyróżniona na IndieDB"
+          "Nagroda Prezydenta Miasta Łodzi",
+          "Nagroda Digital Dragons",
+          "Nagroda specjalna Intel"
         ]
       }
     ]
   },
   "gamejam": {
+    "tabLabel": "Game Jamy",
     "eyebrow": "Game Jamy",
     "title": "Projekty z Game Jamów",
-    "subtitle": "Szybkie projekty stworzone podczas game jamów i hackathonów.",
+    "subtitle": "Szybkie projekty stworzone podczas game jamów.",
     "cards": [
       {
         "badge": "Unity",
-        "title": "Time Loop Escape",
-        "description": "Gra logiczna, w której manipulujesz pętlami czasowymi, aby rozwiązać wyzwania. Stworzona w 48 godzin na Ludum Dare.",
-        "role": "Programista i Designer",
-        "responsibilities": [
-          "Implementacja mechanik pętli czasowych",
-          "Projektowanie 10 poziomów logicznych",
-          "Programowanie sterowania gracza i interakcji"
-        ],
-        "specs": [
-          "Ludum Dare 48 (2024)",
-          "Top 10% w Innowacyjności",
-          "2,000+ zagrań na itch.io"
-        ]
-      },
-      {
-        "badge": "Godot",
-        "title": "Pixel Dungeon Crawler",
-        "description": "Roguelike crawler lochów z proceduralną generacją i turową walką.",
+        "title": "Skewered",
+        "description": "Mobilka na gamejam ZTGK, satysfakcjonująca gra polegająca na nabijaniu na patyk jedzenia w różnych kolejnościach.",
         "role": "Główny Programista",
         "responsibilities": [
-          "Rozwój algorytmu generacji lochów BSP",
-          "Implementacja turowego systemu walki",
-          "Tworzenie systemów przedmiotów i ekwipunku"
+          "System nabijania",
+          "Skiny",
+          "'Losowość' jedzenia i kolejności",
+          "Optymalizacja pod mobile"
         ],
         "specs": [
-          "Global Game Jam 2023",
-          "500+ przedmiotów i umiejętności",
-          "Multi-platforma (PC, Mobile)"
+          "Naprawdę satysfakcjonująca"
         ]
       },
       {
-        "badge": "GameMaker",
-        "title": "Astral Survivors",
-        "description": "Strzelanka przetrwania z progresją w stylu rogue-lite.",
-        "role": "Solowy Programista",
+        "badge": "Unity",
+        "title": "Prank Prison",
+        "description": "Gra multiplayer na 1 ekranie, w której gracze rywalizują o to kto pierwszy wydostanie się z więzienia, jednocześnie starając się uniemożliwić innym ucieczkę.",
+        "role": "Główny Programista",
         "responsibilities": [
-          "Programowanie AI wrogów i systemów spawnowania",
-          "Projektowanie mechanik ulepszania broni",
-          "Implementacja efektów wizualnych i cząsteczek"
+          "Mechaniki przedmiotów i popychania",
+          "Input dla wielu graczy",
+          "Movement i atak strażnika",
+          "Programowanie dzwięków"
         ],
         "specs": [
-          "Mini Jam 72 godziny",
-          "5,000+ zagrań",
-          "Ocena 4.5/5 gwiazdek"
+          "2 gry w tydzień"
+        ]
+      },
+      {
+        "badge": "Unity",
+        "title": "Slap the Fly",
+        "description": "Mobilka na gamejam ZTGK, satysfakcjonujący kliker polegający na zbijaniu much.",
+        "role": "Solowy Programista",
+        "responsibilities": [
+          "Programowanie różnych much",
+          "Stworzenie systemu specyficznych i powtarzalnych ruchów much",
+          "Dodanie umiejętności specjalnych",
+          "Programowanie dźwięków"
+        ],
+        "specs": [
+          "2 gry w tydzień"
         ]
       }
     ]
   },
   "private": {
+    "tabLabel": "Prywatne",
     "eyebrow": "Projekty Osobiste",
     "title": "W Trakcie Rozwoju",
     "subtitle": "Prywatne eksperymenty i projekty obecnie w fazie rozwoju.",
     "cards": [
       {
         "badge": "Unity",
-        "title": "Quantum Shift",
-        "description": "Sci-fi gra logiczna eksplorująca koncepcje mechaniki kwantowej poprzez rozgrywkę.",
-        "role": "Solowy Programista",
+        "title": "The Hidden",
+        "description": "Horror HDRP multiplayer FPS, gdzie jeden gracz jest ledwo-widzialnym łowcą z nozem, a oddział IRIS ma za zadanie go unicestwić.",
+        "role": "MacGyver",
         "responsibilities": [
-          "Projektowanie mechanik inspirowanych fizyką kwantową",
-          "Prototypowanie systemów logicznych",
-          "Eksperymentowanie z efektami shaderów",
-          "Budowa modularnych narzędzi do designu poziomów"
+          "Systemy broni i przedmiotów",
+          "Optymalizacja wydajności",
+          "Programowanie rozgrywki multiplayer NetCode"
         ],
         "specs": [
-          "W rozwoju (2024-obecnie)",
-          "Unity 2022 LTS",
-          "Cel: Steam i itch.io"
+          "Architektura klient - serwer",
+          "Znajomym się podobało"
         ]
       },
-      {
-        "badge": "Unreal",
-        "title": "Prototyp Areny Multiplayer",
-        "description": "Eksperymentalna arena walki multiplayer z unikalnym systemem zdolności.",
-        "role": "Programista Rozgrywki",
-        "responsibilities": [
-          "Implementacja sieciowego systemu zdolności",
-          "Projektowanie klas postaci i balansu",
-          "Budowa map aren i celów",
-          "Testowanie synchronizacji multiplayer"
-        ],
-        "specs": [
-          "Wczesny etap prototypu",
-          "Unreal Engine 5.3",
-          "Architektura dedykowanego serwera"
-        ]
-      }
-    ]
-  },
-  "games": {
-    "eyebrow": "Portfolio",
-    "title": "Wybrane Projekty Gier",
-    "subtitle": "Wybór moich najbardziej ekscytujących prac nad grami, od szybkiej akcji po atmosferyczne gry logiczne.",
-    "cards": [
       {
         "badge": "Unity",
-        "title": "Neon Velocity",
-        "description": "Szybka gra wyścigowa w cyberpunkowym stylu z proceduralnie generowanymi torami i rywalizacją wieloosobową.",
+        "title": "Portal 2D",
+        "description": "Lekka gra 2d na podstawie Portala w której trzeba szybko się przemieszczać i używać portali.",
+        "role": "MacGyver",
+        "responsibilities": [
+          "Portale i ich działanie",
+          "Mechaniki ruchu gracza",
+          "Dobra synchronizacja i fizyka w multiplayerze"
+        ],
         "specs": [
-          "Wydana na Steam (2023)",
-          "85% pozytywnych recenzji",
-          "System sieciowy multiplayer"
-        ]
-      },
-      {
-        "badge": "Unreal",
-        "title": "Shadow's Echo",
-        "description": "Atmosferyczna gra platformowa z unikalnymi mechanikami manipulacji cieniem i ręcznie wykonanymi poziomami.",
-        "specs": [
-          "Zwycięzca: Indie Game Festival 2024",
-          "Niestandardowe łamigłówki fizyczne",
-          "20+ godzin rozgrywki"
-        ]
-      },
-      {
-        "badge": "Godot",
-        "title": "Pixel Dungeon Crawler",
-        "description": "Roguelike crawler lochów z proceduralną generacją, turową walką i retro estetyką.",
-        "specs": [
-          "500+ przedmiotów i umiejętności",
-          "Proceduralna generacja lochów",
-          "Multi-platforma (PC, Mobile)"
+          "Architektura klient - serwer"
         ]
       }
     ]
   },
   "skills": {
-    "eyebrow": "Technologie",
-    "title": "Narzędzia i Ekspertyza",
-    "subtitle": "Biegłość w branżowych silnikach gier, językach programowania i narzędziach kreatywnych.",
+    "eyebrow": "Technikalia",
+    "title": "Znajome mi technologie",
+    "subtitle": "Z każdym dniem coraz więcej się uczę.",
     "categories": [
       {
-        "name": "Silniki Gier",
-        "items": ["Unity 3D", "Unreal Engine 5", "Godot", "GameMaker"]
+        "name": "Frameworki",
+        "items": ["NetCode for GameObjects", "FMOD", "LeanTween", "Cinemachine"]
       },
       {
         "name": "Programowanie",
-        "items": ["C#", "C++", "Python", "GDScript", "JavaScript"]
+        "items": ["C#", "C++", "Python", "JavaScript"]
       },
       {
         "name": "Narzędzia i Design",
-        "items": ["Blender", "Photoshop", "Git", "Jira", "Aseprite"]
+        "items": ["VisualStudio Code", "Photoshop", "Git", "GitHub Actions", "GitHub Projects", "Aseprite"]
       },
       {
         "name": "Specjalizacje",
-        "items": ["Systemy Rozgrywki", "Zachowania AI", "Multiplayer", "Generacja Proceduralna"]
+        "items": ["Mechaniki Rozgrywki", "UI", "Systemy logiczne", "Multiplayer"]
       }
     ]
   },
   "code": {
     "eyebrow": "Prezentacja Kodu",
-    "title": "Najlepszy Kod",
-    "subtitle": "Czyste, efektywne rozwiązania interesujących wyzwań w tworzeniu gier.",
+    "title": "Ciekawy Kod",
+    "subtitle": "Może komuś się przyda :p",
     "snippets": [
       {
-        "title": "Wydajny Object Pooling",
+        "title": "cos ciekawego",
         "language": "C#",
-        "description": "Oszczędny pamięciowo system poolingu obiektów do wydajnego spawnowania pocisków.",
-        "code": "public class ObjectPool<T> where T : MonoBehaviour\n{\n    private Queue<T> pool = new Queue<T>();\n    private T prefab;\n    \n    public T Get()\n    {\n        return pool.Count > 0 ? pool.Dequeue() : \n               Object.Instantiate(prefab);\n    }\n    \n    public void Return(T obj)\n    {\n        obj.gameObject.SetActive(false);\n        pool.Enqueue(obj);\n    }\n}"
+        "description": "TODO",
+        "code": ""
       },
       {
-        "title": "Proceduralny Generator Lochów",
-        "language": "Python",
-        "description": "Algorytm BSP do generowania losowych układów lochów z gwarantowaną łącznością.",
-        "code": "def generate_dungeon(width, height, min_room_size):\n    root = BSPNode(0, 0, width, height)\n    root.split(min_room_size)\n    rooms = root.get_rooms()\n    corridors = connect_rooms(rooms)\n    return Dungeon(rooms, corridors)"
+        "title": "cos ciekawego",
+        "language": "C#",
+        "description": "TODO",
+        "code": ""
       },
       {
-        "title": "Płynne Śledzenie Kamery",
+        "title": "cos ciekawego",
         "language": "C#",
-        "description": "Responsywny system kamery z wygładzaniem i predykcją dla gier platformowych.",
-        "code": "void LateUpdate()\n{\n    Vector3 targetPos = target.position + \n        target.velocity.normalized * lookAhead;\n    transform.position = Vector3.Lerp(\n        transform.position, \n        targetPos, \n        smoothSpeed * Time.deltaTime\n    );\n}"
+        "description": "TODO",
+        "code": ""
       }
     ]
   },
@@ -258,30 +234,28 @@
     "title": "Doświadczenie i Osiągnięcia",
     "subtitle": "Najważniejsze momenty z mojej podróży w tworzeniu gier.",
     "points": [
-      "🏆 Zwycięzca: Najlepsza Gra Indie - Indie Game Festival 2024",
-      "🎮 5+ lat profesjonalnego doświadczenia w tworzeniu gier",
-      "📦 12 opublikowanych gier na Steam, itch.io i platformach mobilnych",
-      "🌍 10,000+ graczy na całym świecie w różnych tytułach",
-      "💻 Współtwórca open-source silnika Godot i narzędzi dla twórców gier",
-      "🎓 Mentor 20+ aspirujących twórców gier przez kursy online"
+      "🏆 3 nagrody na ZTGK za projekt BabushCats",
+      "🎮 4+ lata tworzenia gier",
+      "📦 Wiele projektów w których dużo się nauczyłem",
+      "🌍 Wyjazdy na konferencje i game showcase np Taipei Game Show lub DevGamm Lisbon",
+      "🎓 Mentor młodych programistów w kole tworzenia gier w ZSŁ"
     ]
   },
   "contact": {
     "eyebrow": "Nawiążmy Kontakt",
     "title": "Gotowy na współpracę?",
-    "subtitle": "Czy szukasz twórcy gier, chcesz omówić projekt, czy po prostu porozmawiać o grach - chętnie się skontaktuję!",
+    "subtitle": "Jeśli szukasz twórcy gier, chcesz omówić projekt lub po prostu porozmawiać o grach - pisz śmiało!",
     "bullets": [
-      "Dostępny dla freelance projektów gier",
-      "Otwarty na współpracę i możliwości zespołowe",
-      "Chętny do dyskusji o designie i tworzeniu gier"
+      "Chętnie podejmę się nowych wyzwań",
+      "Jestem otwarty na współpracę i pomoc w różnych projektach"
     ],
     "cta": {
-      "label": "Napisz do mnie",
-      "href": "mailto:contact@mikiplaygames.dev?subject=Porozmawiajmy%20o%20grach"
+      "label": "Napisz do mnie!",
+      "href": "mailto:mikirog2080@gmail.com?subject=Zarzuc_Temacik_:)"
     }
   },
   "footer": {
-    "text": "Tworzę gry z pasją",
+    "text": "Tworzę gry pewną ręką",
     "legal": "© Mikołaj Gajewski"
   }
 }
