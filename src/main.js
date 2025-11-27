@@ -120,7 +120,7 @@ function normalizeLocale(input) {
 }
 
 async function loadLocale(locale) {
-  const url = `$/locales/${locale}.json}`;
+  const url = `/locales/${locale}.json?cache-bust=${Date.now()}`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Unable to load locale ${locale}: ${response.status}`);
