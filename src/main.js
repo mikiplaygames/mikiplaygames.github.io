@@ -2,13 +2,13 @@ const SUPPORTED_LOCALES = [
   { code: 'en', label: 'English' },
   { code: 'pl', label: 'Polski' }
 ];
-const STORAGE_KEY = 'mstaroniewski.locale';
+const STORAGE_KEY = 'mikiheaddev.locale';
 
-const portfolioImageMap = {
-  '/images/1.png': new URL('../images/1.png', import.meta.url).href,
-  '/images/6.png': new URL('../images/6.png', import.meta.url).href,
-  '/images/7.png': new URL('../images/7.png', import.meta.url).href,
-};
+// const portfolioImageMap = {
+//   '/images/1.png': new URL('../images/1.png', import.meta.url).href,
+//   '/images/6.png': new URL('../images/6.png', import.meta.url).href,
+//   '/images/7.png': new URL('../images/7.png', import.meta.url).href,
+// };
 
 const selectors = {
   languageButtons: Array.from(document.querySelectorAll('[data-locale-button]')),
